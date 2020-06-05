@@ -46,3 +46,20 @@ const HTTPList$json = const {
   ],
 };
 
+const Device$json = const {
+  '1': 'Device',
+  '2': const [
+    const {'1': 'RunId', '3': 1, '4': 1, '5': 9, '10': 'RunId'},
+    const {'1': 'Addr', '3': 2, '4': 1, '5': 9, '10': 'Addr'},
+    const {'1': 'Mac', '3': 3, '4': 1, '5': 9, '10': 'Mac'},
+    const {'1': 'Description', '3': 4, '4': 1, '5': 9, '10': 'Description'},
+  ],
+};
+
+const DeviceList$json = const {
+  '1': 'DeviceList',
+  '2': const [
+    const {'1': 'Devices', '3': 1, '4': 3, '5': 11, '6': '.pb.Device', '10': 'Devices'},
+  ],
+};
+

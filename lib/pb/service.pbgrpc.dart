@@ -27,9 +27,9 @@ class HttpManagerClient extends $grpc.Client {
       '/pb.HttpManager/GetOneHTTP',
       ($0.HTTPConfig value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.HTTPConfig.fromBuffer(value));
-  static final _$getAllHTTP = $grpc.ClientMethod<$0.Empty, $0.HTTPList>(
+  static final _$getAllHTTP = $grpc.ClientMethod<$0.Device, $0.HTTPList>(
       '/pb.HttpManager/GetAllHTTP',
-      ($0.Empty value) => value.writeToBuffer(),
+      ($0.Device value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.HTTPList.fromBuffer(value));
 
   HttpManagerClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
@@ -59,7 +59,7 @@ class HttpManagerClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.HTTPList> getAllHTTP($0.Empty request,
+  $grpc.ResponseFuture<$0.HTTPList> getAllHTTP($0.Device request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getAllHTTP, $async.Stream.fromIterable([request]),
@@ -93,12 +93,12 @@ abstract class HttpManagerServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.HTTPConfig.fromBuffer(value),
         ($0.HTTPConfig value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.HTTPList>(
+    $addMethod($grpc.ServiceMethod<$0.Device, $0.HTTPList>(
         'GetAllHTTP',
         getAllHTTP_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
+        ($core.List<$core.int> value) => $0.Device.fromBuffer(value),
         ($0.HTTPList value) => value.writeToBuffer()));
   }
 
@@ -118,7 +118,7 @@ abstract class HttpManagerServiceBase extends $grpc.Service {
   }
 
   $async.Future<$0.HTTPList> getAllHTTP_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+      $grpc.ServiceCall call, $async.Future<$0.Device> request) async {
     return getAllHTTP(call, await request);
   }
 
@@ -129,5 +129,5 @@ abstract class HttpManagerServiceBase extends $grpc.Service {
   $async.Future<$0.HTTPConfig> getOneHTTP(
       $grpc.ServiceCall call, $0.HTTPConfig request);
   $async.Future<$0.HTTPList> getAllHTTP(
-      $grpc.ServiceCall call, $0.Empty request);
+      $grpc.ServiceCall call, $0.Device request);
 }

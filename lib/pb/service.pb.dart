@@ -238,3 +238,89 @@ class HTTPList extends $pb.GeneratedMessage {
   $core.List<HTTPConfig> get hTTPConfigs => $_getList(0);
 }
 
+class Device extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Device', package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..aOS(1, 'RunId', protoName: 'RunId')
+    ..aOS(2, 'Addr', protoName: 'Addr')
+    ..aOS(3, 'Mac', protoName: 'Mac')
+    ..aOS(4, 'Description', protoName: 'Description')
+    ..hasRequiredFields = false
+  ;
+
+  Device._() : super();
+  factory Device() => create();
+  factory Device.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Device.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  Device clone() => Device()..mergeFromMessage(this);
+  Device copyWith(void Function(Device) updates) => super.copyWith((message) => updates(message as Device));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Device create() => Device._();
+  Device createEmptyInstance() => create();
+  static $pb.PbList<Device> createRepeated() => $pb.PbList<Device>();
+  @$core.pragma('dart2js:noInline')
+  static Device getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Device>(create);
+  static Device _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get runId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set runId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasRunId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRunId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get addr => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set addr($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasAddr() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAddr() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get mac => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set mac($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMac() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMac() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get description => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set description($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasDescription() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDescription() => clearField(4);
+}
+
+class DeviceList extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceList', package: const $pb.PackageName('pb'), createEmptyInstance: create)
+    ..pc<Device>(1, 'Devices', $pb.PbFieldType.PM, protoName: 'Devices', subBuilder: Device.create)
+    ..hasRequiredFields = false
+  ;
+
+  DeviceList._() : super();
+  factory DeviceList() => create();
+  factory DeviceList.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DeviceList.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  DeviceList clone() => DeviceList()..mergeFromMessage(this);
+  DeviceList copyWith(void Function(DeviceList) updates) => super.copyWith((message) => updates(message as DeviceList));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DeviceList create() => DeviceList._();
+  DeviceList createEmptyInstance() => create();
+  static $pb.PbList<DeviceList> createRepeated() => $pb.PbList<DeviceList>();
+  @$core.pragma('dart2js:noInline')
+  static DeviceList getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeviceList>(create);
+  static DeviceList _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Device> get devices => $_getList(0);
+}
+
