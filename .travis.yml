@@ -6,15 +6,21 @@ jobs:
     - stage: generateGoFiles
       os: osx
       language: go
+      go:
+        - "1.15.x"
       before_script:
         - brew update
         - export GO111MODULE=on
         - go get google.golang.org/grpc@v1.28.1
         - brew upgrade protobuf
-        - go get github.com/golang/protobuf/protoc-gen-go
+        - go get -u google.golang.org/protobuf/cmd/protoc-gen-go
+        - go install google.golang.org/protobuf/cmd/protoc-gen-go
+        - go get -u google.golang.org/grpc/cmd/protoc-gen-go-grpc
+        - go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
+        - export PATH="$PATH:$(go env GOPATH)/bin"
         - export PATH="$PATH:$(go env GOPATH)/bin"
       script:
-        - protoc --go_out=plugins=grpc:./pb-go service.proto
+        - protoc --go-grpc_out=./pb-go service.proto
     - stage: generateDartFiles
       os: osx
       language: dart
