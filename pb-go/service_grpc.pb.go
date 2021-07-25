@@ -18,6 +18,7 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type HttpManagerClient interface {
 	CreateOneHTTP(ctx context.Context, in *HTTPConfig, opts ...grpc.CallOption) (*HTTPConfig, error)
+	UpdateOneHTTP(ctx context.Context, in *HTTPConfig, opts ...grpc.CallOption) (*HTTPConfig, error)
 	DeleteOneHTTP(ctx context.Context, in *HTTPConfig, opts ...grpc.CallOption) (*Empty, error)
 	GetOneHTTP(ctx context.Context, in *HTTPConfig, opts ...grpc.CallOption) (*HTTPConfig, error)
 	GetAllHTTP(ctx context.Context, in *Device, opts ...grpc.CallOption) (*HTTPList, error)
@@ -34,6 +35,15 @@ func NewHttpManagerClient(cc grpc.ClientConnInterface) HttpManagerClient {
 func (c *httpManagerClient) CreateOneHTTP(ctx context.Context, in *HTTPConfig, opts ...grpc.CallOption) (*HTTPConfig, error) {
 	out := new(HTTPConfig)
 	err := c.cc.Invoke(ctx, "/pb.HttpManager/CreateOneHTTP", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *httpManagerClient) UpdateOneHTTP(ctx context.Context, in *HTTPConfig, opts ...grpc.CallOption) (*HTTPConfig, error) {
+	out := new(HTTPConfig)
+	err := c.cc.Invoke(ctx, "/pb.HttpManager/UpdateOneHTTP", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -72,6 +82,7 @@ func (c *httpManagerClient) GetAllHTTP(ctx context.Context, in *Device, opts ...
 // for forward compatibility
 type HttpManagerServer interface {
 	CreateOneHTTP(context.Context, *HTTPConfig) (*HTTPConfig, error)
+	UpdateOneHTTP(context.Context, *HTTPConfig) (*HTTPConfig, error)
 	DeleteOneHTTP(context.Context, *HTTPConfig) (*Empty, error)
 	GetOneHTTP(context.Context, *HTTPConfig) (*HTTPConfig, error)
 	GetAllHTTP(context.Context, *Device) (*HTTPList, error)
@@ -84,6 +95,9 @@ type UnimplementedHttpManagerServer struct {
 
 func (UnimplementedHttpManagerServer) CreateOneHTTP(context.Context, *HTTPConfig) (*HTTPConfig, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateOneHTTP not implemented")
+}
+func (UnimplementedHttpManagerServer) UpdateOneHTTP(context.Context, *HTTPConfig) (*HTTPConfig, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateOneHTTP not implemented")
 }
 func (UnimplementedHttpManagerServer) DeleteOneHTTP(context.Context, *HTTPConfig) (*Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteOneHTTP not implemented")
@@ -121,6 +135,24 @@ func _HttpManager_CreateOneHTTP_Handler(srv interface{}, ctx context.Context, de
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(HttpManagerServer).CreateOneHTTP(ctx, req.(*HTTPConfig))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _HttpManager_UpdateOneHTTP_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(HTTPConfig)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HttpManagerServer).UpdateOneHTTP(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/pb.HttpManager/UpdateOneHTTP",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HttpManagerServer).UpdateOneHTTP(ctx, req.(*HTTPConfig))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -186,6 +218,10 @@ var _HttpManager_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CreateOneHTTP",
 			Handler:    _HttpManager_CreateOneHTTP_Handler,
+		},
+		{
+			MethodName: "UpdateOneHTTP",
+			Handler:    _HttpManager_UpdateOneHTTP_Handler,
 		},
 		{
 			MethodName: "DeleteOneHTTP",
