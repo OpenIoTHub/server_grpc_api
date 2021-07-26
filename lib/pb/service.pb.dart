@@ -9,26 +9,26 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class StringValue extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StringValue', package: const $pb.PackageName('pb'), createEmptyInstance: create)
+class ServerGoStringValue extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServerGoStringValue', package: const $pb.PackageName('pb'), createEmptyInstance: create)
     ..aOS(1, 'Value', protoName: 'Value')
     ..hasRequiredFields = false
   ;
 
-  StringValue._() : super();
-  factory StringValue() => create();
-  factory StringValue.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory StringValue.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  StringValue clone() => StringValue()..mergeFromMessage(this);
-  StringValue copyWith(void Function(StringValue) updates) => super.copyWith((message) => updates(message as StringValue));
+  ServerGoStringValue._() : super();
+  factory ServerGoStringValue() => create();
+  factory ServerGoStringValue.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ServerGoStringValue.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ServerGoStringValue clone() => ServerGoStringValue()..mergeFromMessage(this);
+  ServerGoStringValue copyWith(void Function(ServerGoStringValue) updates) => super.copyWith((message) => updates(message as ServerGoStringValue));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static StringValue create() => StringValue._();
-  StringValue createEmptyInstance() => create();
-  static $pb.PbList<StringValue> createRepeated() => $pb.PbList<StringValue>();
+  static ServerGoStringValue create() => ServerGoStringValue._();
+  ServerGoStringValue createEmptyInstance() => create();
+  static $pb.PbList<ServerGoStringValue> createRepeated() => $pb.PbList<ServerGoStringValue>();
   @$core.pragma('dart2js:noInline')
-  static StringValue getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StringValue>(create);
-  static StringValue _defaultInstance;
+  static ServerGoStringValue getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ServerGoStringValue>(create);
+  static ServerGoStringValue _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get value => $_getSZ(0);
@@ -40,48 +40,48 @@ class StringValue extends $pb.GeneratedMessage {
   void clearValue() => clearField(1);
 }
 
-class Empty extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Empty', package: const $pb.PackageName('pb'), createEmptyInstance: create)
+class ServerGoEmpty extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServerGoEmpty', package: const $pb.PackageName('pb'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
-  Empty._() : super();
-  factory Empty() => create();
-  factory Empty.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Empty.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  Empty clone() => Empty()..mergeFromMessage(this);
-  Empty copyWith(void Function(Empty) updates) => super.copyWith((message) => updates(message as Empty));
+  ServerGoEmpty._() : super();
+  factory ServerGoEmpty() => create();
+  factory ServerGoEmpty.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ServerGoEmpty.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ServerGoEmpty clone() => ServerGoEmpty()..mergeFromMessage(this);
+  ServerGoEmpty copyWith(void Function(ServerGoEmpty) updates) => super.copyWith((message) => updates(message as ServerGoEmpty));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Empty create() => Empty._();
-  Empty createEmptyInstance() => create();
-  static $pb.PbList<Empty> createRepeated() => $pb.PbList<Empty>();
+  static ServerGoEmpty create() => ServerGoEmpty._();
+  ServerGoEmpty createEmptyInstance() => create();
+  static $pb.PbList<ServerGoEmpty> createRepeated() => $pb.PbList<ServerGoEmpty>();
   @$core.pragma('dart2js:noInline')
-  static Empty getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Empty>(create);
-  static Empty _defaultInstance;
+  static ServerGoEmpty getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ServerGoEmpty>(create);
+  static ServerGoEmpty _defaultInstance;
 }
 
-class ResponseMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ResponseMessage', package: const $pb.PackageName('pb'), createEmptyInstance: create)
+class ServerGoResponseMessage extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServerGoResponseMessage', package: const $pb.PackageName('pb'), createEmptyInstance: create)
     ..aOS(1, 'Code', protoName: 'Code')
     ..aOS(2, 'Message', protoName: 'Message')
     ..hasRequiredFields = false
   ;
 
-  ResponseMessage._() : super();
-  factory ResponseMessage() => create();
-  factory ResponseMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ResponseMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  ResponseMessage clone() => ResponseMessage()..mergeFromMessage(this);
-  ResponseMessage copyWith(void Function(ResponseMessage) updates) => super.copyWith((message) => updates(message as ResponseMessage));
+  ServerGoResponseMessage._() : super();
+  factory ServerGoResponseMessage() => create();
+  factory ServerGoResponseMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ServerGoResponseMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ServerGoResponseMessage clone() => ServerGoResponseMessage()..mergeFromMessage(this);
+  ServerGoResponseMessage copyWith(void Function(ServerGoResponseMessage) updates) => super.copyWith((message) => updates(message as ServerGoResponseMessage));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static ResponseMessage create() => ResponseMessage._();
-  ResponseMessage createEmptyInstance() => create();
-  static $pb.PbList<ResponseMessage> createRepeated() => $pb.PbList<ResponseMessage>();
+  static ServerGoResponseMessage create() => ServerGoResponseMessage._();
+  ServerGoResponseMessage createEmptyInstance() => create();
+  static $pb.PbList<ServerGoResponseMessage> createRepeated() => $pb.PbList<ServerGoResponseMessage>();
   @$core.pragma('dart2js:noInline')
-  static ResponseMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ResponseMessage>(create);
-  static ResponseMessage _defaultInstance;
+  static ServerGoResponseMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ServerGoResponseMessage>(create);
+  static ServerGoResponseMessage _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get code => $_getSZ(0);

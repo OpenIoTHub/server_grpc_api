@@ -8,13 +8,13 @@ option go_package = ".;pb";
 
 package pb;
 
-message StringValue{
+message ServerGoStringValue{
     string Value = 1;
 }
 //小米网关设备
-message Empty{}
+message ServerGoEmpty{}
 
-message ResponseMessage{
+message ServerGoResponseMessage{
     string Code = 1;
     string Message = 2;
 }
@@ -50,7 +50,7 @@ message DeviceList{
 service HttpManager {
     rpc CreateOneHTTP (HTTPConfig) returns (HTTPConfig) {}
     rpc UpdateOneHTTP (HTTPConfig) returns (HTTPConfig) {}
-    rpc DeleteOneHTTP (HTTPConfig) returns (Empty) {}
+    rpc DeleteOneHTTP (HTTPConfig) returns (ServerGoEmpty) {}
     rpc GetOneHTTP (HTTPConfig) returns (HTTPConfig) {}
     rpc GetAllHTTP (Device) returns (HTTPList) {}
 }

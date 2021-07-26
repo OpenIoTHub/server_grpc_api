@@ -24,10 +24,11 @@ class HttpManagerClient extends $grpc.Client {
           '/pb.HttpManager/UpdateOneHTTP',
           ($0.HTTPConfig value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.HTTPConfig.fromBuffer(value));
-  static final _$deleteOneHTTP = $grpc.ClientMethod<$0.HTTPConfig, $0.Empty>(
-      '/pb.HttpManager/DeleteOneHTTP',
-      ($0.HTTPConfig value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+  static final _$deleteOneHTTP =
+      $grpc.ClientMethod<$0.HTTPConfig, $0.ServerGoEmpty>(
+          '/pb.HttpManager/DeleteOneHTTP',
+          ($0.HTTPConfig value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $0.ServerGoEmpty.fromBuffer(value));
   static final _$getOneHTTP = $grpc.ClientMethod<$0.HTTPConfig, $0.HTTPConfig>(
       '/pb.HttpManager/GetOneHTTP',
       ($0.HTTPConfig value) => value.writeToBuffer(),
@@ -56,7 +57,7 @@ class HttpManagerClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseFuture<$0.Empty> deleteOneHTTP($0.HTTPConfig request,
+  $grpc.ResponseFuture<$0.ServerGoEmpty> deleteOneHTTP($0.HTTPConfig request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$deleteOneHTTP, $async.Stream.fromIterable([request]),
@@ -99,13 +100,13 @@ abstract class HttpManagerServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.HTTPConfig.fromBuffer(value),
         ($0.HTTPConfig value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.HTTPConfig, $0.Empty>(
+    $addMethod($grpc.ServiceMethod<$0.HTTPConfig, $0.ServerGoEmpty>(
         'DeleteOneHTTP',
         deleteOneHTTP_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.HTTPConfig.fromBuffer(value),
-        ($0.Empty value) => value.writeToBuffer()));
+        ($0.ServerGoEmpty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.HTTPConfig, $0.HTTPConfig>(
         'GetOneHTTP',
         getOneHTTP_Pre,
@@ -132,7 +133,7 @@ abstract class HttpManagerServiceBase extends $grpc.Service {
     return updateOneHTTP(call, await request);
   }
 
-  $async.Future<$0.Empty> deleteOneHTTP_Pre(
+  $async.Future<$0.ServerGoEmpty> deleteOneHTTP_Pre(
       $grpc.ServiceCall call, $async.Future<$0.HTTPConfig> request) async {
     return deleteOneHTTP(call, await request);
   }
@@ -151,7 +152,7 @@ abstract class HttpManagerServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.HTTPConfig request);
   $async.Future<$0.HTTPConfig> updateOneHTTP(
       $grpc.ServiceCall call, $0.HTTPConfig request);
-  $async.Future<$0.Empty> deleteOneHTTP(
+  $async.Future<$0.ServerGoEmpty> deleteOneHTTP(
       $grpc.ServiceCall call, $0.HTTPConfig request);
   $async.Future<$0.HTTPConfig> getOneHTTP(
       $grpc.ServiceCall call, $0.HTTPConfig request);
