@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: service.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use serverGoStringValueDescriptor instead')
 const ServerGoStringValue$json = const {
   '1': 'ServerGoStringValue',
   '2': const [
@@ -12,10 +16,16 @@ const ServerGoStringValue$json = const {
   ],
 };
 
+/// Descriptor for `ServerGoStringValue`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List serverGoStringValueDescriptor = $convert.base64Decode('ChNTZXJ2ZXJHb1N0cmluZ1ZhbHVlEhQKBVZhbHVlGAEgASgJUgVWYWx1ZQ==');
+@$core.Deprecated('Use serverGoEmptyDescriptor instead')
 const ServerGoEmpty$json = const {
   '1': 'ServerGoEmpty',
 };
 
+/// Descriptor for `ServerGoEmpty`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List serverGoEmptyDescriptor = $convert.base64Decode('Cg1TZXJ2ZXJHb0VtcHR5');
+@$core.Deprecated('Use serverGoResponseMessageDescriptor instead')
 const ServerGoResponseMessage$json = const {
   '1': 'ServerGoResponseMessage',
   '2': const [
@@ -24,6 +34,9 @@ const ServerGoResponseMessage$json = const {
   ],
 };
 
+/// Descriptor for `ServerGoResponseMessage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List serverGoResponseMessageDescriptor = $convert.base64Decode('ChdTZXJ2ZXJHb1Jlc3BvbnNlTWVzc2FnZRISCgRDb2RlGAEgASgJUgRDb2RlEhgKB01lc3NhZ2UYAiABKAlSB01lc3NhZ2U=');
+@$core.Deprecated('Use hTTPConfigDescriptor instead')
 const HTTPConfig$json = const {
   '1': 'HTTPConfig',
   '2': const [
@@ -39,6 +52,9 @@ const HTTPConfig$json = const {
   ],
 };
 
+/// Descriptor for `HTTPConfig`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List hTTPConfigDescriptor = $convert.base64Decode('CgpIVFRQQ29uZmlnEhQKBVJ1bklkGAEgASgJUgVSdW5JZBIWCgZEb21haW4YAiABKAlSBkRvbWFpbhIaCghSZW1vdGVJUBgDIAEoCVIIUmVtb3RlSVASHgoKUmVtb3RlUG9ydBgEIAEoBVIKUmVtb3RlUG9ydBIaCghVc2VyTmFtZRgFIAEoCVIIVXNlck5hbWUSGgoIUGFzc3dvcmQYBiABKAlSCFBhc3N3b3JkEhgKB0lmSHR0cHMYByABKAhSB0lmSHR0cHMSIAoLRGVzY3JpcHRpb24YCCABKAlSC0Rlc2NyaXB0aW9uEioKEFJlbW90ZVBvcnRTdGF0dXMYCSABKAhSEFJlbW90ZVBvcnRTdGF0dXM=');
+@$core.Deprecated('Use hTTPListDescriptor instead')
 const HTTPList$json = const {
   '1': 'HTTPList',
   '2': const [
@@ -46,6 +62,9 @@ const HTTPList$json = const {
   ],
 };
 
+/// Descriptor for `HTTPList`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List hTTPListDescriptor = $convert.base64Decode('CghIVFRQTGlzdBIwCgtIVFRQQ29uZmlncxgBIAMoCzIOLnBiLkhUVFBDb25maWdSC0hUVFBDb25maWdz');
+@$core.Deprecated('Use deviceDescriptor instead')
 const Device$json = const {
   '1': 'Device',
   '2': const [
@@ -56,6 +75,9 @@ const Device$json = const {
   ],
 };
 
+/// Descriptor for `Device`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deviceDescriptor = $convert.base64Decode('CgZEZXZpY2USFAoFUnVuSWQYASABKAlSBVJ1bklkEhIKBEFkZHIYAiABKAlSBEFkZHISEAoDTWFjGAMgASgJUgNNYWMSIAoLRGVzY3JpcHRpb24YBCABKAlSC0Rlc2NyaXB0aW9u');
+@$core.Deprecated('Use deviceListDescriptor instead')
 const DeviceList$json = const {
   '1': 'DeviceList',
   '2': const [
@@ -63,3 +85,5 @@ const DeviceList$json = const {
   ],
 };
 
+/// Descriptor for `DeviceList`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deviceListDescriptor = $convert.base64Decode('CgpEZXZpY2VMaXN0EiQKB0RldmljZXMYASADKAsyCi5wYi5EZXZpY2VSB0RldmljZXM=');

@@ -2,25 +2,41 @@
 //  Generated code. Do not modify.
 //  source: service.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ServerGoStringValue extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServerGoStringValue', package: const $pb.PackageName('pb'), createEmptyInstance: create)
-    ..aOS(1, 'Value', protoName: 'Value')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ServerGoStringValue', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Value', protoName: 'Value')
     ..hasRequiredFields = false
   ;
 
   ServerGoStringValue._() : super();
-  factory ServerGoStringValue() => create();
+  factory ServerGoStringValue({
+    $core.String? value,
+  }) {
+    final _result = create();
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
   factory ServerGoStringValue.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ServerGoStringValue.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   ServerGoStringValue clone() => ServerGoStringValue()..mergeFromMessage(this);
-  ServerGoStringValue copyWith(void Function(ServerGoStringValue) updates) => super.copyWith((message) => updates(message as ServerGoStringValue));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ServerGoStringValue copyWith(void Function(ServerGoStringValue) updates) => super.copyWith((message) => updates(message as ServerGoStringValue)) as ServerGoStringValue; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ServerGoStringValue create() => ServerGoStringValue._();
@@ -28,7 +44,7 @@ class ServerGoStringValue extends $pb.GeneratedMessage {
   static $pb.PbList<ServerGoStringValue> createRepeated() => $pb.PbList<ServerGoStringValue>();
   @$core.pragma('dart2js:noInline')
   static ServerGoStringValue getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ServerGoStringValue>(create);
-  static ServerGoStringValue _defaultInstance;
+  static ServerGoStringValue? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get value => $_getSZ(0);
@@ -41,7 +57,7 @@ class ServerGoStringValue extends $pb.GeneratedMessage {
 }
 
 class ServerGoEmpty extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServerGoEmpty', package: const $pb.PackageName('pb'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ServerGoEmpty', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
     ..hasRequiredFields = false
   ;
 
@@ -49,8 +65,16 @@ class ServerGoEmpty extends $pb.GeneratedMessage {
   factory ServerGoEmpty() => create();
   factory ServerGoEmpty.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ServerGoEmpty.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   ServerGoEmpty clone() => ServerGoEmpty()..mergeFromMessage(this);
-  ServerGoEmpty copyWith(void Function(ServerGoEmpty) updates) => super.copyWith((message) => updates(message as ServerGoEmpty));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ServerGoEmpty copyWith(void Function(ServerGoEmpty) updates) => super.copyWith((message) => updates(message as ServerGoEmpty)) as ServerGoEmpty; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ServerGoEmpty create() => ServerGoEmpty._();
@@ -58,22 +82,42 @@ class ServerGoEmpty extends $pb.GeneratedMessage {
   static $pb.PbList<ServerGoEmpty> createRepeated() => $pb.PbList<ServerGoEmpty>();
   @$core.pragma('dart2js:noInline')
   static ServerGoEmpty getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ServerGoEmpty>(create);
-  static ServerGoEmpty _defaultInstance;
+  static ServerGoEmpty? _defaultInstance;
 }
 
 class ServerGoResponseMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServerGoResponseMessage', package: const $pb.PackageName('pb'), createEmptyInstance: create)
-    ..aOS(1, 'Code', protoName: 'Code')
-    ..aOS(2, 'Message', protoName: 'Message')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ServerGoResponseMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Code', protoName: 'Code')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Message', protoName: 'Message')
     ..hasRequiredFields = false
   ;
 
   ServerGoResponseMessage._() : super();
-  factory ServerGoResponseMessage() => create();
+  factory ServerGoResponseMessage({
+    $core.String? code,
+    $core.String? message,
+  }) {
+    final _result = create();
+    if (code != null) {
+      _result.code = code;
+    }
+    if (message != null) {
+      _result.message = message;
+    }
+    return _result;
+  }
   factory ServerGoResponseMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ServerGoResponseMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   ServerGoResponseMessage clone() => ServerGoResponseMessage()..mergeFromMessage(this);
-  ServerGoResponseMessage copyWith(void Function(ServerGoResponseMessage) updates) => super.copyWith((message) => updates(message as ServerGoResponseMessage));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ServerGoResponseMessage copyWith(void Function(ServerGoResponseMessage) updates) => super.copyWith((message) => updates(message as ServerGoResponseMessage)) as ServerGoResponseMessage; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ServerGoResponseMessage create() => ServerGoResponseMessage._();
@@ -81,7 +125,7 @@ class ServerGoResponseMessage extends $pb.GeneratedMessage {
   static $pb.PbList<ServerGoResponseMessage> createRepeated() => $pb.PbList<ServerGoResponseMessage>();
   @$core.pragma('dart2js:noInline')
   static ServerGoResponseMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ServerGoResponseMessage>(create);
-  static ServerGoResponseMessage _defaultInstance;
+  static ServerGoResponseMessage? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get code => $_getSZ(0);
@@ -103,25 +147,73 @@ class ServerGoResponseMessage extends $pb.GeneratedMessage {
 }
 
 class HTTPConfig extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HTTPConfig', package: const $pb.PackageName('pb'), createEmptyInstance: create)
-    ..aOS(1, 'RunId', protoName: 'RunId')
-    ..aOS(2, 'Domain', protoName: 'Domain')
-    ..aOS(3, 'RemoteIP', protoName: 'RemoteIP')
-    ..a<$core.int>(4, 'RemotePort', $pb.PbFieldType.O3, protoName: 'RemotePort')
-    ..aOS(5, 'UserName', protoName: 'UserName')
-    ..aOS(6, 'Password', protoName: 'Password')
-    ..aOB(7, 'IfHttps', protoName: 'IfHttps')
-    ..aOS(8, 'Description', protoName: 'Description')
-    ..aOB(9, 'RemotePortStatus', protoName: 'RemotePortStatus')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'HTTPConfig', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'RunId', protoName: 'RunId')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Domain', protoName: 'Domain')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'RemoteIP', protoName: 'RemoteIP')
+    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'RemotePort', $pb.PbFieldType.O3, protoName: 'RemotePort')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'UserName', protoName: 'UserName')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Password', protoName: 'Password')
+    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'IfHttps', protoName: 'IfHttps')
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Description', protoName: 'Description')
+    ..aOB(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'RemotePortStatus', protoName: 'RemotePortStatus')
     ..hasRequiredFields = false
   ;
 
   HTTPConfig._() : super();
-  factory HTTPConfig() => create();
+  factory HTTPConfig({
+    $core.String? runId,
+    $core.String? domain,
+    $core.String? remoteIP,
+    $core.int? remotePort,
+    $core.String? userName,
+    $core.String? password,
+    $core.bool? ifHttps,
+    $core.String? description,
+    $core.bool? remotePortStatus,
+  }) {
+    final _result = create();
+    if (runId != null) {
+      _result.runId = runId;
+    }
+    if (domain != null) {
+      _result.domain = domain;
+    }
+    if (remoteIP != null) {
+      _result.remoteIP = remoteIP;
+    }
+    if (remotePort != null) {
+      _result.remotePort = remotePort;
+    }
+    if (userName != null) {
+      _result.userName = userName;
+    }
+    if (password != null) {
+      _result.password = password;
+    }
+    if (ifHttps != null) {
+      _result.ifHttps = ifHttps;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    if (remotePortStatus != null) {
+      _result.remotePortStatus = remotePortStatus;
+    }
+    return _result;
+  }
   factory HTTPConfig.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory HTTPConfig.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   HTTPConfig clone() => HTTPConfig()..mergeFromMessage(this);
-  HTTPConfig copyWith(void Function(HTTPConfig) updates) => super.copyWith((message) => updates(message as HTTPConfig));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  HTTPConfig copyWith(void Function(HTTPConfig) updates) => super.copyWith((message) => updates(message as HTTPConfig)) as HTTPConfig; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static HTTPConfig create() => HTTPConfig._();
@@ -129,7 +221,7 @@ class HTTPConfig extends $pb.GeneratedMessage {
   static $pb.PbList<HTTPConfig> createRepeated() => $pb.PbList<HTTPConfig>();
   @$core.pragma('dart2js:noInline')
   static HTTPConfig getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HTTPConfig>(create);
-  static HTTPConfig _defaultInstance;
+  static HTTPConfig? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get runId => $_getSZ(0);
@@ -214,17 +306,33 @@ class HTTPConfig extends $pb.GeneratedMessage {
 }
 
 class HTTPList extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HTTPList', package: const $pb.PackageName('pb'), createEmptyInstance: create)
-    ..pc<HTTPConfig>(1, 'HTTPConfigs', $pb.PbFieldType.PM, protoName: 'HTTPConfigs', subBuilder: HTTPConfig.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'HTTPList', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
+    ..pc<HTTPConfig>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'HTTPConfigs', $pb.PbFieldType.PM, protoName: 'HTTPConfigs', subBuilder: HTTPConfig.create)
     ..hasRequiredFields = false
   ;
 
   HTTPList._() : super();
-  factory HTTPList() => create();
+  factory HTTPList({
+    $core.Iterable<HTTPConfig>? hTTPConfigs,
+  }) {
+    final _result = create();
+    if (hTTPConfigs != null) {
+      _result.hTTPConfigs.addAll(hTTPConfigs);
+    }
+    return _result;
+  }
   factory HTTPList.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory HTTPList.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   HTTPList clone() => HTTPList()..mergeFromMessage(this);
-  HTTPList copyWith(void Function(HTTPList) updates) => super.copyWith((message) => updates(message as HTTPList));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  HTTPList copyWith(void Function(HTTPList) updates) => super.copyWith((message) => updates(message as HTTPList)) as HTTPList; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static HTTPList create() => HTTPList._();
@@ -232,27 +340,55 @@ class HTTPList extends $pb.GeneratedMessage {
   static $pb.PbList<HTTPList> createRepeated() => $pb.PbList<HTTPList>();
   @$core.pragma('dart2js:noInline')
   static HTTPList getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HTTPList>(create);
-  static HTTPList _defaultInstance;
+  static HTTPList? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<HTTPConfig> get hTTPConfigs => $_getList(0);
 }
 
 class Device extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Device', package: const $pb.PackageName('pb'), createEmptyInstance: create)
-    ..aOS(1, 'RunId', protoName: 'RunId')
-    ..aOS(2, 'Addr', protoName: 'Addr')
-    ..aOS(3, 'Mac', protoName: 'Mac')
-    ..aOS(4, 'Description', protoName: 'Description')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Device', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'RunId', protoName: 'RunId')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Addr', protoName: 'Addr')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Mac', protoName: 'Mac')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Description', protoName: 'Description')
     ..hasRequiredFields = false
   ;
 
   Device._() : super();
-  factory Device() => create();
+  factory Device({
+    $core.String? runId,
+    $core.String? addr,
+    $core.String? mac,
+    $core.String? description,
+  }) {
+    final _result = create();
+    if (runId != null) {
+      _result.runId = runId;
+    }
+    if (addr != null) {
+      _result.addr = addr;
+    }
+    if (mac != null) {
+      _result.mac = mac;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    return _result;
+  }
   factory Device.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Device.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Device clone() => Device()..mergeFromMessage(this);
-  Device copyWith(void Function(Device) updates) => super.copyWith((message) => updates(message as Device));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Device copyWith(void Function(Device) updates) => super.copyWith((message) => updates(message as Device)) as Device; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Device create() => Device._();
@@ -260,7 +396,7 @@ class Device extends $pb.GeneratedMessage {
   static $pb.PbList<Device> createRepeated() => $pb.PbList<Device>();
   @$core.pragma('dart2js:noInline')
   static Device getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Device>(create);
-  static Device _defaultInstance;
+  static Device? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get runId => $_getSZ(0);
@@ -300,17 +436,33 @@ class Device extends $pb.GeneratedMessage {
 }
 
 class DeviceList extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceList', package: const $pb.PackageName('pb'), createEmptyInstance: create)
-    ..pc<Device>(1, 'Devices', $pb.PbFieldType.PM, protoName: 'Devices', subBuilder: Device.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DeviceList', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
+    ..pc<Device>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Devices', $pb.PbFieldType.PM, protoName: 'Devices', subBuilder: Device.create)
     ..hasRequiredFields = false
   ;
 
   DeviceList._() : super();
-  factory DeviceList() => create();
+  factory DeviceList({
+    $core.Iterable<Device>? devices,
+  }) {
+    final _result = create();
+    if (devices != null) {
+      _result.devices.addAll(devices);
+    }
+    return _result;
+  }
   factory DeviceList.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DeviceList.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   DeviceList clone() => DeviceList()..mergeFromMessage(this);
-  DeviceList copyWith(void Function(DeviceList) updates) => super.copyWith((message) => updates(message as DeviceList));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  DeviceList copyWith(void Function(DeviceList) updates) => super.copyWith((message) => updates(message as DeviceList)) as DeviceList; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static DeviceList create() => DeviceList._();
@@ -318,7 +470,7 @@ class DeviceList extends $pb.GeneratedMessage {
   static $pb.PbList<DeviceList> createRepeated() => $pb.PbList<DeviceList>();
   @$core.pragma('dart2js:noInline')
   static DeviceList getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeviceList>(create);
-  static DeviceList _defaultInstance;
+  static DeviceList? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Device> get devices => $_getList(0);

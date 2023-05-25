@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: service.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:async' as $async;
 
@@ -38,47 +38,34 @@ class HttpManagerClient extends $grpc.Client {
       ($0.Device value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.HTTPList.fromBuffer(value));
 
-  HttpManagerClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  HttpManagerClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.HTTPConfig> createOneHTTP($0.HTTPConfig request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createOneHTTP, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createOneHTTP, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.HTTPConfig> updateOneHTTP($0.HTTPConfig request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateOneHTTP, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateOneHTTP, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.ServerGoEmpty> deleteOneHTTP($0.HTTPConfig request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteOneHTTP, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteOneHTTP, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.HTTPConfig> getOneHTTP($0.HTTPConfig request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getOneHTTP, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getOneHTTP, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.HTTPList> getAllHTTP($0.Device request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getAllHTTP, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAllHTTP, request, options: options);
   }
 }
 
